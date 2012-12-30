@@ -79,7 +79,7 @@ The machines we'll be using are as follows:
  - add the puppetmaster machine to `/etc/hosts` like so
    <pre>
    127.0.0.1  osc.FQDN osc
-   172.24.0.10  pm.FQDN pm 
+   172.24.0.10  pm.FQDN pm
    </pre>
  - name the `openstack_controller` machine in `/etc/hostname` like so
    <pre>
@@ -97,9 +97,9 @@ The machines we'll be using are as follows:
     </pre>
  - configure the puppet agent as follows (in `/etc/puppet/puppet.conf`)
    <pre>
-   [agent] 
+   [agent]
    server=pm.FQDN
-   certname=openstack_controller 
+   certname=openstack_controller
    </pre>
  - add the ubuntu/folsom repository:
    <pre>
@@ -145,7 +145,7 @@ The machines we'll be using are as follows:
  - add the puppetmaster machine to `/etc/hosts` like so
    <pre>
    127.0.0.1  oscn1.FQDN oscn1
-   172.24.0.10  pm.FQDN pm 
+   172.24.0.10  pm.FQDN pm
    </pre>
  - name the `openstack_compute` machine in `/etc/hostname` like so
    <pre>
@@ -163,7 +163,7 @@ The machines we'll be using are as follows:
     </pre>
  - configure the puppet agent as follows (in `/etc/puppet/puppet.conf`)
    <pre>
-   [agent] 
+   [agent]
    server=pm.FQDN
    # omit certname, machine name will be assumed automatically
    </pre>

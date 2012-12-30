@@ -1,6 +1,6 @@
 # folsom on ubuntu using puppet
 
-Multi-node OpenStack `folsom` installation notes (on `ubuntu` using `puppet`).
+Multi-node OpenStack `folsom` installation notes (on `ubuntu` using [puppet Openstack modules](https://github.com/puppetlabs/puppetlabs-openstack)).
 Please note that most of this was culled from the following article:
  [Openstack Folsom Deploy by Puppet on Ubuntu 12.04 HOWTO](http://edin.no-ip.com/blog/hswong3i/openstack-folsom-deploy-puppet-ubuntu-12-04-howto)
 

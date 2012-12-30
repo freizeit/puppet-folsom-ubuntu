@@ -47,7 +47,7 @@ The machines we'll be using are as follows:
    </pre>
  - add the OpenStack controller and compute nodes to `/etc/hosts`
    <pre>
-   172.24.0.11  osc.FQDN pm 
+   172.24.0.11  osc.FQDN osc 
    172.24.0.12  oscn1.FQDN oscn1
    172.24.0.13  oscn2.FQDN oscn2
    </pre>

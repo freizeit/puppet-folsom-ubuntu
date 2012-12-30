@@ -171,9 +171,11 @@ The machines we'll be using are as follows:
    </pre>
 
 
+## Prepare the second `openstack_compute` machine
 Repeat the `openstack_compute` setup for the second worker machine (`oscn2`) with the appropriate IP (`172.24.0.13`).
 
-Add an image to the OpenStack cloud by running the following commands on the controller node:
+## Add an (ubuntu server) image to the cloud
+In order to be able to start intances on the newly installed cloud we'll need an image. Please add it by running the following commands on the controller node:
    <pre>
    sudo su -
    source openrc

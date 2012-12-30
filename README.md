@@ -109,7 +109,17 @@ The machines we'll be using are as follows:
    aptitude install -y ubuntu-cloud-keyring
    aptitude update
    </pre>
- - invoke the puppet agent and go for a coffee break:
+ - invoke the puppet agent
+   <pre>
+   sudo puppet agent -vt
+   </pre>
+ - switch to the pupppet master console and sign the agent's certificate
+   <pre>
+   sudo puppet cert list
+   sudo puppet cert sign osc.FQDN
+   </pre>
+   The step above is only necessary after the very first `puppet agent` call
+ - re-run the puppet agent
    <pre>
    sudo puppet agent -vt
    </pre>

@@ -118,7 +118,7 @@ The machines we'll be using are as follows:
    sudo puppet cert list
    sudo puppet cert sign osc.FQDN
    </pre>
-   The step above is only necessary after the very first `puppet agent` call on the controller node (`osc.FQDN`).
+   The step above is only necessary after the very first `puppet agent` call on the controller node.
  - re-run the puppet agent
    <pre>
    sudo puppet agent -vt
@@ -184,7 +184,7 @@ The machines we'll be using are as follows:
    sudo puppet cert list
    sudo puppet cert sign oscn1.FQDN
    </pre>
-   The step above is only necessary after the very first `puppet agent` call on the compute node (`oscn1.FQDN`).
+   The step above is only necessary after the very first `puppet agent` call on the compute node.
  - re-run the puppet agent
    <pre>
    sudo puppet agent -vt

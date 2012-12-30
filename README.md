@@ -4,11 +4,11 @@ Multi-node OpenStack `folsom` installation notes (on `ubuntu` using `puppet`).
 Please note that most of this was culled from the following article:
  [Openstack Folsom Deploy by Puppet on Ubuntu 12.04 HOWTO](http://edin.no-ip.com/blog/hswong3i/openstack-folsom-deploy-puppet-ubuntu-12-04-howto)
 
-Please note: in order for the puppet manifests to work all host names must be fully qualified (use .e.g. `.local` for a FQDN).
+Please note also: in order for the puppet manifests to work all host names must be fully qualified (use .e.g. `.local` for a FQDN).
 
 The machines we'll be using are as follows:
 
- - puppet master: `pm` at `172.24.0.10`
+ - puppet master: `pm` at `172.24.0.10` (not part of the resulting cloud)
  - OpenStack controller node: `osc` at `172.24.0.11`
  - OpenStack compute node #1: `oscn1` at `172.24.0.12`
  - OpenStack compute node #2: `oscn2` at `172.24.0.13`

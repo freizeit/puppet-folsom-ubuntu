@@ -81,20 +81,45 @@ The machines we will be using are as follows:
     sudo /opt/razor/bin/razor_daemon.rb start
     </pre>
 
+## booting the `razor` micro-kernel
+
 Now boot up a machine that is attached to the `172.25.1.0` network in `PXE` mode and watch the magic happen :-)
 Once it comes up you can view its properties on the `razor` machine as follows:
-    <pre>
-    $ sudo razor -n node
-    Discovered Nodes
-            UUID           Last Checkin  Status                 Tags                  
-    63EC6bm1fE35UZEektJjh  37 sec        A       [memsize_1GiB,nics_2,kvm_vm,cpus_2]
-    </pre>
-    and
-    <pre>
-    $ sudo razor -n node 63EC6bm1fE35UZEektJjh
-     UUID =>  63EC6bm1fE35UZEektJjh
-     Last Checkin =>  01-10-13 14:57:14
-     Status =>  active
-     Tags =>  [memsize_1GiB,nics_2,kvm_vm,cpus_2]
-     Hardware IDs =>  [525400E31381]
-    </pre>
+<pre>
+$ sudo razor -n node
+Discovered Nodes
+        UUID           Last Checkin  Status                 Tags                  
+63EC6bm1fE35UZEektJjh  37 sec        A       [memsize_1GiB,nics_2,kvm_vm,cpus_2]
+</pre>
+and
+<pre>
+$ sudo razor -n node 63EC6bm1fE35UZEektJjh
+ UUID =>  63EC6bm1fE35UZEektJjh
+ Last Checkin =>  01-10-13 14:57:14
+ Status =>  active
+ Tags =>  [memsize_1GiB,nics_2,kvm_vm,cpus_2]
+ Hardware IDs =>  [525400E31381]
+</pre>
+
+## setting up an ubuntu server image
+
+Booting the micro-kernel is only a first step. Let us setup `razor` so it can serve up a real OS.
+<pre>
+wget http://releases.ubuntu.com/precise/ubuntu-12.04.1-server-amd64.iso
+sudo razor image add -t os -p ./ubuntu-12.04.1-server-amd64.iso -n ubuntu_precise -v 12.04
+</pre>
+This should result in something like this:
+<pre>
+Attempting to add, please wait...
+
+New image added successfully
+
+Added Image:
+ UUID =>  6jwiYNcuAboUkaXSlkANKX
+ Type =>  OS Install
+ ISO Filename =>  ubuntu-12.04.1-server-amd64.iso
+ Path =>  /opt/razor/image/os/6jwiYNcuAboUkaXSlkANKX
+ Status =>  Valid
+ OS Name =>  ubuntu_precise
+ OS Version =>  12.04
+</pre>

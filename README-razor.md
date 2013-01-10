@@ -82,7 +82,7 @@ The machines we will be using are as follows:
     </pre>
 
 Now boot up a machine that is attached to the `172.25.1.0` network in `PXE` mode and watch the magic happen :-)
-Once it comes up you can view its proprties on the `razor` machine as follows:
+Once it comes up you can view its properties on the `razor` machine as follows:
     <pre>
     $ sudo razor -n node
     Discovered Nodes

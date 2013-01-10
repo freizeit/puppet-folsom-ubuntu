@@ -59,7 +59,7 @@ The machines we will be using are as follows:
     sudo puppet module install saz-dnsmasq
     sudo puppet apply /etc/puppet/modules/dnsmasq/tests/init.pp --verbose
     </pre>
- - create a file `razor-config.pp` with the following content:
+ - create a file `razor-dnsmasq-config.pp` with the following content:
     <pre>
     dnsmasq::conf { 'razor-dnsmasq-config':
     ensure  => present,

@@ -37,7 +37,7 @@ The machines we will be using are as follows:
    <pre>
     puppet.FQDN
    </pre>
- - turn off the builtin DHCP server (if you have one)
+ - turn off the builtin DHCP server for the `172.25.1.0` network (if you have one)
  - reboot the machine for the changes above to take effect
  - add the puppetlabs repo
     <pre>
@@ -68,5 +68,5 @@ The machines we will be using are as follows:
     </pre>
  - and run puppet to allow the configuration to take effect
     <pre>
-    puppet apply razor-dnsmasq-config.pp
+    sudo puppet apply razor-dnsmasq-config.pp
     </pre>

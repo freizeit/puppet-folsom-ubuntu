@@ -70,12 +70,31 @@ The machines we will be using are as follows:
     <pre>
     sudo puppet apply razor-dnsmasq-config.pp
     </pre>
+ - reboot one more time
  - last but not least make sure the razor daemon is up and running
     <pre>
-    puppet:~$ sudo /opt/razor/bin/razor_daemon.rb status
+    $ sudo /opt/razor/bin/razor_daemon.rb status
     razor_daemon: running [pid 9630]
     </pre>
     If it is not running please start it as follows:
     <pre>
     sudo /opt/razor/bin/razor_daemon.rb start
+    </pre>
+
+Now boot up a machine that is attached to the `172.25.1.0` network in `PXE` mode and watch the magic happen :-)
+Once it comes up you can view its proprties on the `razor` machine as follows:
+    <pre>
+    $ sudo razor -n node
+    Discovered Nodes
+            UUID           Last Checkin  Status                 Tags                  
+    63EC6bm1fE35UZEektJjh  37 sec        A       [memsize_1GiB,nics_2,kvm_vm,cpus_2]
+    </pre>
+    and
+    <pre>
+    $ sudo razor -n node 63EC6bm1fE35UZEektJjh
+     UUID =>  63EC6bm1fE35UZEektJjh
+     Last Checkin =>  01-10-13 14:57:14
+     Status =>  active
+     Tags =>  [memsize_1GiB,nics_2,kvm_vm,cpus_2]
+     Hardware IDs =>  [525400E31381]
     </pre>

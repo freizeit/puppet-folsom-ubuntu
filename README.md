@@ -39,9 +39,9 @@ The machines we'll be using are as follows:
     auto eth1
     iface eth1 inet static
       address 172.24.0.10
-      netmask 255.255.0.0
+      netmask 255.255.255.0
       network 172.24.0.0
-      broadcast 172.24.255.255
+      broadcast 172.24.0.255
       gateway 172.24.0.1
       dns-nameservers 172.24.0.1
    </pre>
@@ -67,9 +67,9 @@ The machines we'll be using are as follows:
     auto eth0
     iface eth0 inet static
       address 172.24.0.11
-      netmask 255.255.0.0
+      netmask 255.255.255.0
       network 172.24.0.0
-      broadcast 172.24.255.255
+      broadcast 172.24.0.255
       gateway 172.24.0.1
       dns-nameservers 172.24.0.1
     auto eth1
@@ -133,9 +133,9 @@ The machines we'll be using are as follows:
     auto eth0
     iface eth0 inet static
       address 172.24.0.12
-      netmask 255.255.0.0
+      netmask 255.255.255.0
       network 172.24.0.0
-      broadcast 172.24.255.255
+      broadcast 172.24.0.255
       gateway 172.24.0.1
       dns-nameservers 172.24.0.1
     auto eth1

@@ -37,7 +37,7 @@ The machines we will be using are as follows:
    <pre>
     puppet.FQDN
    </pre>
- - turn off the builtin DHCP server for the `172.25.1.0` network (if you have one)
+ - turn off the DHCP server for the `172.25.1.0` network (if you have one)
  - reboot the machine for the changes above to take effect
  - add the puppetlabs repo
     <pre>
@@ -69,4 +69,13 @@ The machines we will be using are as follows:
  - and run puppet to allow the configuration to take effect
     <pre>
     sudo puppet apply razor-dnsmasq-config.pp
+    </pre>
+ - last but not least make sure the razor daemon is up and running
+    <pre>
+    puppet:~$ sudo /opt/razor/bin/razor_daemon.rb status
+    razor_daemon: running [pid 9630]
+    </pre>
+    If it is not running please start it as follows:
+    <pre>
+    sudo /opt/razor/bin/razor_daemon.rb start
     </pre>

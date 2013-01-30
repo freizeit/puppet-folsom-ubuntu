@@ -123,3 +123,28 @@ Added Image:
  OS Name =>  ubuntu_precise
  OS Version =>  12.04
 </pre>
+
+Next we will add a `razor` model as follows:
+<pre>
+$ sudo razor model add -t ubuntu_precise -l install_precise -i 6jwiYNcuAboUkaXSlkANKX
+--- Building Model (ubuntu_precise): 
+
+Please enter local domain name (will be used in /etc/hosts file) (example: example.com) 
+default: localdomain
+(QUIT to cancel)
+ > noops.co
+Please enter root password (> 8 characters) (example: P@ssword!) 
+default: test1234
+(QUIT to cancel)
+ > 
+Please enter node hostname prefix (will append node number) (example: node) 
+default: node
+(QUIT to cancel)
+ > osn1
+Model created
+ Label =>  install_precise
+ Template =>  linux_deploy
+ Description =>  Ubuntu Precise Model
+ UUID =>  7O1KQtGts9iIitORt88gNh
+ Image UUID =>  6jwiYNcuAboUkaXSlkANKX
+</pre>
